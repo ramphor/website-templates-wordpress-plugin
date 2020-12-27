@@ -1,0 +1,21 @@
+{
+    "name": "ramphor/wp-website-templates",
+    "description": "Create website templates for WordPress website",
+    "type": "project",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Puleeno Nguyen",
+            "email": "puleeno@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "jankx/template": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ramphor\\WebsiteTemplate\\": "includes/WebsiteTemplate"
+        }
+    }
+}
