@@ -3,6 +3,7 @@ namespace Ramphor\WebsiteTemplate;
 
 use Ramphor\WebsiteTemplate\PostType;
 use Ramphor\WebsiteTemplate\Metabox;
+use Ramphor\WebsiteTemplate\Elementor\ElementorIntegration;
 
 class WebsiteTemplate
 {
@@ -30,6 +31,10 @@ class WebsiteTemplate
     public function initFeatures()
     {
         PostType::init();
+        $active_plugins = get_option('active_plugins');
+        if (in_array('elementor/elementor.php', $active_plugins)) {
+            new ElementorIntegration();
+        }
     }
 
     public function initHooks()
