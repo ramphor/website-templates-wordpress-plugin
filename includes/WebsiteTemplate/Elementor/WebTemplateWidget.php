@@ -2,6 +2,7 @@
 namespace Ramphor\WebsiteTemplate\Elementor;
 
 use Elementor\Widget_Base;
+use Ramphor\WebsiteTemplate\Renderer\WebTemplate;
 
 class WebTemplateWidget extends Widget_Base
 {
@@ -17,6 +18,10 @@ class WebTemplateWidget extends Widget_Base
 
     protected function render()
     {
-        echo 'web templates';
+        $webTemplate = new WebTemplate();
+        $webTemplate->parseArgs(array(
+            'limit' => 9,
+        ));
+        echo $webTemplate->render();
     }
 }
