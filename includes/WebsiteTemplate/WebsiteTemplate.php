@@ -26,6 +26,11 @@ class WebsiteTemplate
 
     protected function boostrap()
     {
+        define(
+            'WEBSITE_TEMPLATES_ROOT',
+            dirname(WP_WEBSITE_TEMPLATES_PLUGIN_FILE)
+        );
+        require_once WEBSITE_TEMPLATES_ROOT . '/includes/functions.php';
     }
 
     public function initFeatures()
@@ -42,5 +47,14 @@ class WebsiteTemplate
         $meta_box = new Metabox();
         add_action('add_meta_boxes', array($meta_box, 'register_metabox'));
         add_action('save_post', array($meta_box, 'save'), 10, 2);
+        add_filter('wp_website_template_parse_loop_data', array($this, 'parseTemplateData'), 10, 2);
+    }
+
+    public function parseTemplateData($data, $post)
+    {
+        $code     = get_website_template_code($post->ID);
+        $demo_url = get_website_template_demo_url($post->ID);
+
+        return array_merge($data, compact('code', 'demo_url'));
     }
 }
