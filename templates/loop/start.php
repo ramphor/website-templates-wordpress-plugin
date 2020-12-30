@@ -1,1 +1,2 @@
-<ul class="website-template-list">
+<div class="website-template-list">
+    <div class="list-inner">
