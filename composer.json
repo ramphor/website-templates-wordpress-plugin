@@ -11,8 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "jankx/template": "dev-master",
-        "jankx/post-layout": "dev-master"
+        "jankx/template": "dev-master"
     },
     "autoload": {
         "psr-4": {

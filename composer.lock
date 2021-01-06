@@ -4,78 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "071d84921b5ea6a8e364aeceacdc52da",
+    "content-hash": "91b1dfc0953013807b5ce35f22c225f4",
     "packages": [
-        {
-            "name": "jankx/asset",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jankx/asset.git",
-                "reference": "8bf193f4899376f63793dff447a2baa0a63e1006"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jankx/asset/zipball/8bf193f4899376f63793dff447a2baa0a63e1006",
-                "reference": "8bf193f4899376f63793dff447a2baa0a63e1006",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Jankx\\Asset\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Puleeno Nguyen",
-                    "email": "puleeno@gmail.com"
-                }
-            ],
-            "description": "Jankx Assets is used to manage CSS, JS, libraries with beautiful syntax",
-            "time": "2021-01-04T06:27:41+00:00"
-        },
-        {
-            "name": "jankx/component",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jankx/component.git",
-                "reference": "0296ab6b00f41ff3c4dbac762ccc3750ff869ab8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jankx/component/zipball/0296ab6b00f41ff3c4dbac762ccc3750ff869ab8",
-                "reference": "0296ab6b00f41ff3c4dbac762ccc3750ff869ab8",
-                "shasum": ""
-            },
-            "require": {
-                "jankx/asset": "*",
-                "jankx/template": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Jankx\\Component\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Puleeno Nguyen",
-                    "email": "puleeno@gmail.com"
-                }
-            ],
-            "description": "Jankx components",
-            "time": "2020-12-24T06:08:09+00:00"
-        },
         {
             "name": "jankx/helpers",
             "version": "dev-master",
@@ -108,80 +38,6 @@
             ],
             "description": "The helpers for Jankx Framework",
             "time": "2020-12-17T10:31:42+00:00"
-        },
-        {
-            "name": "jankx/post-layout",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jankx/post-layout.git",
-                "reference": "17d949494e50765846f7e2641de2ea70e5443415"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jankx/post-layout/zipball/17d949494e50765846f7e2641de2ea70e5443415",
-                "reference": "17d949494e50765846f7e2641de2ea70e5443415",
-                "shasum": ""
-            },
-            "require": {
-                "jankx/site-layout": "dev-master",
-                "jankx/template": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Jankx\\PostLayout\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Puleeno Nguyen",
-                    "email": "puleeno@gmail.com"
-                }
-            ],
-            "description": "WordPress post and custom post type layout generator",
-            "time": "2021-01-02T04:31:03+00:00"
-        },
-        {
-            "name": "jankx/site-layout",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jankx/site-layout.git",
-                "reference": "dddec31e5b8038f407b9efedf1a65a3bf8192aa6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jankx/site-layout/zipball/dddec31e5b8038f407b9efedf1a65a3bf8192aa6",
-                "reference": "dddec31e5b8038f407b9efedf1a65a3bf8192aa6",
-                "shasum": ""
-            },
-            "require": {
-                "jankx/component": "dev-master",
-                "jankx/template": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Jankx\\SiteLayout\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Puleeno Nguyen",
-                    "email": "puleeno@gmail.com"
-                }
-            ],
-            "description": "The best way to create multi-layouts",
-            "time": "2020-12-31T15:31:23+00:00"
         },
         {
             "name": "jankx/template",
@@ -260,8 +116,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "jankx/template": 20,
-        "jankx/post-layout": 20
+        "jankx/template": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
