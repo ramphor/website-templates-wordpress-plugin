@@ -10,7 +10,7 @@ class WebTemplate extends Renderer
     {
         $wp_query = $this->get_wp_query();
         $template_files = array('loop/website-template');
-        if ($this->demo_style) {
+        if ($this->demo_style && $this->demo_style !== 'link') {
             array_unshift($template_files, sprintf('loop/%s/website-template', $this->demo_style));
         }
         if ($wp_query->have_posts()) {
