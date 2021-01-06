@@ -12,7 +12,10 @@
 
                 <div class="tpl-actions">
                     <div class="act-view-detail">
-                        <a href="<?php the_permalink(); ?>">View Detail</a>
+                        <a
+                            data-fslightbox
+                            href="<?php echo wp_get_attachment_url(get_post_thumbnail_id()); ?>"
+                        >View Detail</a>
                     </div>
                     <div class="act-live-demo">
                         <a href="<?php echo $demo_url ? $demo_url : '#'; ?>">View Demo</a>

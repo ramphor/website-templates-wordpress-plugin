@@ -23,6 +23,10 @@ class WebTemplateWidget extends Widget_Base
             'limit' => 9,
             'demo_style' => 'link',
         ));
+        $footerCallable = array($webTemplate, 'footerScripts');
+        if (is_callable($footerCallable)) {
+            add_action('wp_print_footer_scripts', $footerCallable);
+        }
         echo $webTemplate->render();
     }
 }
