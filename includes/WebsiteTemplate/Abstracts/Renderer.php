@@ -20,7 +20,7 @@ abstract class Renderer implements RendererConstract
     public function parseArgs($args = array())
     {
         if (isset($args['limit'])) {
-            $this->setLimit($args['limit']);
+            $this->setLimit($args['limit'] > 0 ? $args['limit'] : -1);
         }
         if (isset($args['demo_style'])) {
             $this->demo_style = $args['demo_style'];

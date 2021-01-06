@@ -18,7 +18,7 @@
                         >View Detail</a>
                     </div>
                     <div class="act-live-demo">
-                        <a href="<?php echo $demo_url ? $demo_url : '#'; ?>">View Demo</a>
+                        <a target="_blank" href="<?php echo $demo_url ? $demo_url : '#'; ?>">View Demo</a>
                     </div>
                 </div>
             </div>
