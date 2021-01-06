@@ -44,6 +44,11 @@ class WebsiteTemplate
 
     public function initHooks()
     {
+        global $web_template_scripts;
+
+        $web_template_scripts = new ScriptLoader();
+        add_action('wp_enqueue_scripts', array($web_template_scripts, 'load'), 40);
+
         $meta_box = new Metabox();
         add_action('add_meta_boxes', array($meta_box, 'register_metabox'));
         add_action('save_post', array($meta_box, 'save'), 10, 2);
