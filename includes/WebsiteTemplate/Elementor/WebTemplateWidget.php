@@ -21,6 +21,7 @@ class WebTemplateWidget extends Widget_Base
         $webTemplate = new WebTemplate();
         $webTemplate->parseArgs(array(
             'limit' => 9,
+            'demo_style' => 'link',
         ));
         echo $webTemplate->render();
     }

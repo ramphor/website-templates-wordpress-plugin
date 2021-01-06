@@ -8,6 +8,7 @@ use Ramphor\WebsiteTemplate\Constracts\Renderer as RendererConstract;
 abstract class Renderer implements RendererConstract
 {
     protected $query_args = array();
+    protected $demo_style;
 
     public function __construct($args = null)
     {
@@ -20,6 +21,9 @@ abstract class Renderer implements RendererConstract
     {
         if (isset($args['limit'])) {
             $this->setLimit($args['limit']);
+        }
+        if (isset($args['demo_style'])) {
+            $this->demo_style = $args['demo_style'];
         }
     }
 
