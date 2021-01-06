@@ -19,6 +19,9 @@ class ScriptLoader {
         global $wp_scripts, $wp_styles;
 
         if (!isset($wp_scripts->registered['splide'])) {
+            wp_register_script('fslightbox-basic', $this->asset_url('vendor/fslightbox-basic/fslightbox.js'), array(), '3.2.3', true);
+        }
+        if (!isset($wp_scripts->registered['splide'])) {
             wp_register_script('splide', $this->asset_url('vendor/splide/js/splide.min.js'), array(), '2.4.21', true);
         }
         if (!isset($wp_styles->registered['splide'])) {
@@ -31,5 +34,7 @@ class ScriptLoader {
         // Call scripts
         wp_enqueue_script('splide');
         wp_enqueue_style('splide-theme');
+
+        wp_enqueue_script('fslightbox-basic');
     }
 }
