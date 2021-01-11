@@ -65,9 +65,13 @@ class WebTemplateWidget extends Widget_Base
         $settings = $this->get_settings_for_display();
         $webTemplate = new WebTemplate();
         $webTemplate->parseArgs(array(
-            'limit' => array_get($settings['posts_per_page'], 9),
             'demo_style' => 'link',
         ));
+        $webTemplate->setLimit(
+            array_get($settings, 'posts_per_page') >= 0
+            ? array_get( $settings, 'posts_per_page' )
+            : -1
+        );
         $footerCallable = array($webTemplate, 'footerScripts');
         if (is_callable($footerCallable)) {
             add_action('wp_print_footer_scripts', $footerCallable);
