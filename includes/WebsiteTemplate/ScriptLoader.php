@@ -1,7 +1,8 @@
 <?php
 namespace Ramphor\WebsiteTemplate;
 
-class ScriptLoader {
+class ScriptLoader
+{
 
     public function asset_url($path = '')
     {
@@ -15,7 +16,8 @@ class ScriptLoader {
         );
     }
 
-    public function load() {
+    public function load()
+    {
         global $wp_scripts, $wp_styles;
 
         if (!isset($wp_scripts->registered['splide'])) {

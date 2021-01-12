@@ -69,7 +69,7 @@ class WebTemplateWidget extends Widget_Base
         ));
         $webTemplate->setLimit(
             array_get($settings, 'posts_per_page') >= 0
-            ? array_get( $settings, 'posts_per_page' )
+            ? array_get($settings, 'posts_per_page')
             : -1
         );
         $footerCallable = array($webTemplate, 'footerScripts');
