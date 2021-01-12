@@ -2,6 +2,7 @@
 namespace Ramphor\WebsiteTemplate\Elementor;
 
 use Elementor\Widget_Base;
+use Ramphor\WebsiteTemplate\Renderer\WebTemplateCategory;
 
 class TemplateCategoryWidget extends Widget_Base
 {
@@ -21,5 +22,8 @@ class TemplateCategoryWidget extends Widget_Base
 
     protected function render()
     {
+        $settings = $this->get_settings_for_display();
+        $renderer = new WebTemplateCategory();
+        echo $renderer;
     }
 }

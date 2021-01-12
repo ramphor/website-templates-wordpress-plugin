@@ -17,10 +17,6 @@ class WebTemplate extends Renderer
         }
     }
 
-    public static function parse($args = array())
-    {
-    }
-
     public function get_wp_query()
     {
         $args = wp_parse_args(array(

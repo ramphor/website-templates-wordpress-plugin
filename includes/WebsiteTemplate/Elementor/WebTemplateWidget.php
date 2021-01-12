@@ -48,11 +48,11 @@ class WebTemplateWidget extends Widget_Base
             'posts_per_page',
             [
 
-                'label' => __('Number of Posts', 'jankx'),
-                'type' => Controls_Manager::NUMBER,
-                'min' => 0,
-                'max' => 100,
-                'step' => 1,
+                'label'   => __('Number of Posts', 'jankx'),
+                'type'    => Controls_Manager::NUMBER,
+                'min'     => -1,
+                'max'     => 100,
+                'step'    => 1,
                 'default' => 5,
             ]
         );

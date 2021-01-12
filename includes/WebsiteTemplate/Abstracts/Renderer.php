@@ -15,4 +15,17 @@ abstract class Renderer implements RendererConstract
             $this->parseArgs($args);
         }
     }
+
+    public function __toString()
+    {
+        $content = $this->render();
+        if (is_string($content)) {
+            return $content;
+        }
+        return '';
+    }
+
+    public static function parse($args = array())
+    {
+    }
 }
