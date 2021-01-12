@@ -13,7 +13,10 @@ class TemplateLoader
             $templateDirectory = sprintf('%s/templates', dirname(WP_WEBSITE_TEMPLATES_PLUGIN_FILE));
             static::$loader = Template::getLoader(
                 $templateDirectory,
-                apply_filters('wp_website_template_override_directory', 'templates/website-templates'),
+                apply_filters(
+                    'wp_website_template_override_directory',
+                    'templates/website-templates'
+                ),
                 'wordpress'
             );
         }
