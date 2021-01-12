@@ -1,5 +1,5 @@
-<li class="tpl-cat" data-term="<?php echo $slug; ?>">
+<li class="tpl-cat">
     <div class="cat-item">
-        <a href="<?php echo $url; ?>"><?php echo $name; ?></a>
+        <a href="<?php echo $url; ?>" data-term="<?php echo $slug; ?>"><?php echo $name; ?></a>
     </div>
 </li>
